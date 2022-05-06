@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeatherApp</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="Rupali Purwar">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" th:src="@{/js/cssandjs/scripts.js}"></script>
+  <style>
+  .center {
+		margin: auto;
+		width: 60%;
+		border: 5px solid #FFFF00;
+		padding: 10px;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin:20px;
+}
+</style>
+
+  <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
+
+</head>
+
+<body>
+  <!-- your content here... -->
+  <div class="center" style="width:600px;height:600px;border:solid 1px gray;font-size:30px;">
+  	<div style="background-color:#4CAF50;float:left;width:600px;margin:10px;color:white;text-align:center;">Weather Application</div>
+  	<div style="float:left;width:150px">Country:</div><div style="float:right;width:350px"><select style="font-size:20px;width:300px;" type="dropdown" id="country_dropdown" onChange="updateCityDropdown()"></select></div>
+  	<div style="float:left;width:150px">City:</div><div style="float:right;width:350px"><select style="font-size:20px;width:300px" type="dropdown" id="city_dropdown" ></select></div>
+  	<div style="float:left;width:150px"></div><div style="float:right;width:350px"><button onclick="getCurrentWeather()" id="weather_button">Get Current Weather</button></div>
+  	<div id="weather_box" style="float:left;width:600px;display:none;">
+  	<div style="float:left;width:150px">Weather:</div><div style="float:right;width:350px" id="weather"></div>
+  	<div style="float:left;width:150px">Temperature(C):</div><div style="float:right;width:350px" id="temp"></div>
+  	
+  	</div>
+  	
+  </div>
+  
+  
+</body>
+</html>
